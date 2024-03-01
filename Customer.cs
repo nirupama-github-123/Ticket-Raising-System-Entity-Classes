@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace ProjectStructure
 {
-    internal class Customer : User
+    public class Customer : User
     {
+        public List<Ticket> TicketsCreated = [];
     }
 }

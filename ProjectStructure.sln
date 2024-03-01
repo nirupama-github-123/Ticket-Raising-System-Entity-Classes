@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34330.188
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectStructure", "ProjectStructure.csproj", "{BBCEE911-44F7-462C-A4DB-ADBD4FB8A5E8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TicketRaisingSystem", "TicketRaisingSystem.csproj", "{BBCEE911-44F7-462C-A4DB-ADBD4FB8A5E8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Src", "Src", "{95EC95E8-5CE1-4285-B609-623DD9C554CB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docs", "Docs", "{E7AA6817-A66E-4DCE-962A-B3E7C046F003}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -18,6 +22,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{BBCEE911-44F7-462C-A4DB-ADBD4FB8A5E8} = {95EC95E8-5CE1-4285-B609-623DD9C554CB}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {99736856-2CB0-4ACD-8B48-CB5736A7E6C1}

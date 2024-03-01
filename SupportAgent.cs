@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace ProjectStructure
 {
-    internal class ServiceAgent : User
+    public class SupportAgent : User
     {
+        public Role Role { get; set; } = Role.SupportAgent;
     }
 }

@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace ProjectStructure
 {
-    internal class Role
+    public enum  Role
     {
+        Administrator = 1,
+        SupportAgent
     }
 }

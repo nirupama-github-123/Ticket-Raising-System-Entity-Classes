@@ -10,31 +10,40 @@ using System.Threading.Tasks;
 
 namespace ProjectStructure
 {
-    internal class Ticket
-{
-    [Key]
-    public int TicketId { get; set; }
+    public class Ticket
+    {
+        [Key]
+        public int TicketId { get; set; }
 
-    [Required(ErrorMessage = "Title is required")]
-    [StringLength(50, ErrorMessage = "Title cannot exceed 50 characters")]
-    public string Title { get; set; }
+        /// <summary>
+        /// Subject of the ticket
+        /// </summary>
+        [Required(ErrorMessage = "Title is required")]
+        [StringLength(50, ErrorMessage = "Title cannot exceed 50 characters")]
+        public string Title { get; set; }
 
-    [StringLength(250, ErrorMessage = "Description cannot exceed 250 characters")]
-    public string Description { get; set; }
+        [StringLength(250, ErrorMessage = "Description cannot exceed 250 characters")]
+        public string Description { get; set; }
 
-    [ForeignKey("Customer")]
-    [JsonIgnore]
-    public Customer RaisedBy { get; set; }
+        [JsonIgnore]
+        public Customer RaisedBy { get; set; }
 
-    public TicketStatus Status { get; set; } = TicketStatus.Pending;
+        public TicketStatus Status { get; set; } = TicketStatus.Pending;
 
-    [JsonIgnore]
-    public ServiceAgent AssignedTo { get; set; }
+        [JsonIgnore]
+        public SupportAgent? AssignedTo { get; set; }
 
-    [StringLength(50)]
-    public string Category { get; set; }
 
-    [Required(ErrorMessage = "CreatedDate is required")]
-    public DateTime CreatedDate { get; set; }
-}
+        public Category? Category { get; set; }
+
+        [Required(ErrorMessage = "CreatedDate is required")]
+        public DateTime CreatedDate { get; set; }
+
+        [Required(ErrorMessage = "DueDate is required")]
+        public DateTime? DueDate { get; set; }
+
+        public Priority Priority { get; set; } = Priority.Low;
+
+        public List<TicketHistory> TicketUpdates = new List<TicketHistory>();
+    }
 }

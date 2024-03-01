@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace ProjectStructure
 {
-    internal class TicketStatus
+    public enum TicketStatus
     {
+        Unassigned = 1,
+        Pending,
+        InProgress,
+        OnHold,
+        AwaitingResponse,
+        Resolved
     }
 }
