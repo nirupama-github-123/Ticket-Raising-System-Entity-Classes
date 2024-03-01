@@ -39,7 +39,6 @@ namespace ProjectStructure
         [Required(ErrorMessage = "CreatedDate is required")]
         public DateTime CreatedDate { get; set; }
 
-        [Required(ErrorMessage = "DueDate is required")]
         public DateTime? DueDate { get; set; }
 
         public Priority Priority { get; set; } = Priority.Low;
