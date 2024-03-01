@@ -8,6 +8,5 @@ namespace ProjectStructure
 {
     public class Customer : User
     {
-        public List<Ticket> TicketsCreated = [];
     }
 }
