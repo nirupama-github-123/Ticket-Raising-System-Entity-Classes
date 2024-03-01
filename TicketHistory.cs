@@ -16,6 +16,8 @@ namespace ProjectStructure
 
         public SupportAgent? UpdatedBySupportAgent { get; set; }
 
+        public string Description {get; set;}
+
         [Required]
         public DateTime UpdatedDate { get; set; }
     }
